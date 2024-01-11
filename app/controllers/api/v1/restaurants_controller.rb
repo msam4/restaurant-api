@@ -22,7 +22,7 @@ class Api::V1::RestaurantsController < Api::V1::BaseController
     @restaurant.user = current_user
     authorize @restaurant
     if @restaurant.save
-      render :show
+      render :show, status: :created
     else
       render_error
     end
