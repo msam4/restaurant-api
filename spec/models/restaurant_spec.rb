@@ -18,6 +18,11 @@ RSpec.describe Restaurant, type: :model do
       it 'is not valid' do
         expect(restaurant.valid?).to eq(false)
       end
+
+      it 'returns error message' do
+        restaurant.valid?
+        expect(restaurant.errors.messages).to eq({ user: ["must exist"]})
+      end
     end
 
     context 'with missing name' do
@@ -25,11 +30,11 @@ RSpec.describe Restaurant, type: :model do
         restaurant.name = nil
       end
 
-      it 'is not valid with missing name' do
+      it 'is not valid' do
         expect(restaurant.valid?).to eq(false)
       end
 
-      it 'returns error message with missing name' do
+      it 'returns error message' do
         restaurant.valid?
         expect(restaurant.errors.messages).to eq({ name: ["can't be blank"]})
       end
@@ -40,11 +45,11 @@ RSpec.describe Restaurant, type: :model do
         restaurant.address = nil
       end
 
-      it 'is not valid with missing address' do
+      it 'is not valid' do
         expect(restaurant.valid?).to eq(false)
       end
 
-      it 'returns error message with missing description' do
+      it 'returns error message' do
         restaurant.valid?
         expect(restaurant.errors.messages).to eq({ address: ["can't be blank"]})
       end
