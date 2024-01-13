@@ -4,6 +4,7 @@ class API::V1::RestaurantsController < API::V1::BaseController
 
   def index
     @restaurants = policy_scope(Restaurant)
+    # render json
   end
 
   def show
