@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  # This matches the root path to the root of the api
+  mount API::Base, at: "/"
+
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :restaurants, only: [ :index, :show, :update, :create, :destroy ]
