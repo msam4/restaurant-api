@@ -1,4 +1,4 @@
-class Api::V1::BaseController < ActionController::API
+class API::V1::BaseController < ActionController::API
   include Pundit::Authorization
 
   after_action :verify_authorized, except: :index
