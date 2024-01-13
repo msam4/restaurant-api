@@ -53,6 +53,7 @@ gem "sassc-rails"
 gem "pundit"
 gem 'simple_token_authentication'
 gem 'grape'
+gem 'rack-cors'
 
 group :development, :test do
   gem "dotenv-rails"
