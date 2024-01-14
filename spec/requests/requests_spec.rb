@@ -6,9 +6,10 @@ RSpec.describe API::V1::RestaurantsController, type: :request do
     it 'should save an instance of restaurant to the db' do
       user = User.create(email: 'tom@email.com', password: 'testtest')
       params = { restaurant: { name: 'Wendys', address: 'Boston', user: user}}
+      user_email = user.email
       auth_token = user.authentication_token
 
-      post "#{root_url}api/v1/restaurants", params: params, headers: { "X-User-Token": auth_token }
+      post "#{root_url}api/v1/restaurants", params: params, headers: { "X-User-Email": user_email, "X-User-Token": auth_token }
       # binding.break
       expect(Restaurant.last.name).to eq('Wendys')
     end
