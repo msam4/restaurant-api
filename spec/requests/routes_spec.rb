@@ -40,4 +40,16 @@ RSpec.describe "Restaurant API Routes", type: :request do
       expect(response).to have_http_status(200)
     end
   end
+
+  # DELETE test is not working. Same issue as the POST test
+  describe "DELETE /api/v1/restaurants/:id" do
+    it "deletes a restaurant" do
+      restaurant = Restaurant.create(name: "Hardys", address: "Lansing", user: user)
+
+      expect {
+        delete "/api/v1/restaurants/#{restaurant.id}"
+      }.to change(Restaurant, :count).by(-1)
+      expect(response).to have_http_status(204)
+    end
+  end
 end
