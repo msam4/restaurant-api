@@ -9,7 +9,7 @@ RSpec.describe API::V1::RestaurantsController, type: :request do
       auth_token = user.authentication_token
 
       post "#{root_url}api/v1/restaurants", params: params, headers: { "X-User-Token": auth_token }
-      binding.break
+      # binding.break
       expect(Restaurant.last.name).to eq('Wendys')
     end
   end
