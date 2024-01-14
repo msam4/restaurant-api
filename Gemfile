@@ -55,6 +55,7 @@ gem 'simple_token_authentication'
 gem 'grape'
 gem 'rack-cors'
 gem 'grape-active_model_serializers'
+gem "cloudinary"
 
 group :development, :test do
   gem "dotenv-rails"
