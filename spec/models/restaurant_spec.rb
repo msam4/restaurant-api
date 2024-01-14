@@ -56,17 +56,12 @@ RSpec.describe Restaurant, type: :model do
     end
   end
 
-  ## Unable to get uniqueness of name to work. The false test is always failing.
-  ## Add a new migration to add uniqueness to restaurant name's index but the test still fails
-
   context 'when checking uniqueness of name' do
     it 'return true if the name is unique' do
-      # test code here
       expect(restaurant).to be_valid
     end
 
     it 'return false if the name is not unique' do
-      # test code here
       params = { name: 'Unique', address: 'Tokyo', user: user }
       Restaurant.create(params)
       duplicate_restaurant = Restaurant.new(name: 'Unique', address: 'Tokyo', user: user)
