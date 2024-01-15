@@ -30,11 +30,13 @@ RSpec.describe API::V1::RestaurantsController, type: :request do
       restaurant = Restaurant.create(name: "White Castle", address: "St. Louis", user: user)
       new_name = "Sonic"
       new_address = "Chicago"
-      new_params = { restaurant: { name: new_name, address: new_address, user: user } }
 
-      put "#{root_url}api/v1/restaurants/#{restaurant.id}", params: new_params, headers: { "X-User-Email": user_email, "X-User-Token": auth_token }
-      # binding.break
+      patch "#{root_url}api/v1/restaurants/#{restaurant.id}", params: { restaurant: { name: new_name, address: new_address } }, headers: { "X-User-Email": user_email, "X-User-Token": auth_token }
+      restaurant.reload
+
       expect(restaurant.name).to eq("Sonic")
+      expect(restaurant.address).to eq("Chicago")
+      expect(response).to have_http_status(:ok)
     end
   end
 
