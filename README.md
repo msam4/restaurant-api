@@ -120,10 +120,9 @@ rails s
 
 ## Built With
 - [Rails 7](https://guides.rubyonrails.org/) - Backend / Front-end
-- [Stimulus JS](https://stimulus.hotwired.dev/) - Front-end JS
 - [Heroku](https://heroku.com/) - Deployment
 - [PostgreSQL](https://www.postgresql.org/) - Database
-- [Bootstrap](https://getbootstrap.com/) — Styling
 
 ## Additional Features to Add
+- Rspec test for comment controller and route.
 - Frontend UI to connect with the backend server.
