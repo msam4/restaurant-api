@@ -37,4 +37,20 @@ RSpec.describe API::V1::RestaurantsController, type: :request do
       expect(restaurant.name).to eq("Sonic")
     end
   end
+
+  describe "#index" do
+    it "returns a success response" do
+      get "#{root_url}api/v1/restaurants"
+      expect(response).to be_successful
+    end
+
+    it "returns all restaurants" do
+      restaurant1 = Restaurant.create(name: "Subway", address: "Houston", user: user)
+      restaurant2 = Restaurant.create(name: "Outback", address: "Las Vegas", user: user)
+
+      get "#{root_url}api/v1/restaurants"
+      expect(Restaurant.first.name).to eq("Subway")
+      expect(Restaurant.last.name).to eq("Outback")
+    end
+  end
 end
