@@ -1,7 +1,10 @@
 require 'rails_helper'
+include Rails.application.routes.url_helpers
 
 RSpec.describe "Restaurant API Routes", type: :request do
   let(:user) { User.create(email: 'tom@email.com', password: 'testtest') }
+  let(:user_email) { user.email }
+  let(:auth_token) { user.authentication_token }
 
   describe "GET /api/v1/restaurants" do
     it "returns all restaurants" do
@@ -15,7 +18,7 @@ RSpec.describe "Restaurant API Routes", type: :request do
     it "creates a new restaurant" do
       # user = User.create(email: "tom@email.com", password: "testtest")
       params = { name: "Panda Express", address: "San Fransico", user: user}
-      post "/api/v1/restaurants", params: { restaurant: params }
+      post "#{root_url}/api/v1/restaurants", params: { restaurant: params }, headers: { "X-User-Email": user_email, "X-User-Token": auth_token }
 
       expect(response).to have_http_status(201)
     end
