@@ -48,7 +48,8 @@ App home: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/
   - "name": "ADD_RESTAURANT_NAME", "address": "ADD_RESTAURANT_ADDRESS"
 <br>
 
-![image](https://github.com/msam4/restaurant-api/assets/137851066/0b430f29-64de-43ab-8a0a-717e9225ae1c)
+![image](https://github.com/msam4/restaurant-api/assets/137851066/8fa8b165-c51d-4654-94d4-accb14b6346b)
+
 <br>
 - Save and then click the SEND button
 
@@ -56,6 +57,23 @@ App home: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/
 <br>
 
 ### Update a Restaurant
+- Set the verb to PATCH
+- In the url after the PATCH verb, insert the following url: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/api/v1/restaurants/:id
+- In the HEADER tab, make sure the have same header keys and values when creating a new restaurant (see Create a New Restaurant 3rd bullet point)
+- In the body tab, select raw and set the drop down menu to JSON
+
+![image](https://github.com/msam4/restaurant-api/assets/137851066/c5f9e705-e07b-46d2-8490-84735898f67d)
+<br>
+
+- Save and then click the SEND button
+
+![image](https://github.com/msam4/restaurant-api/assets/137851066/04f1f3d8-22bc-4717-b2a5-1a4f5c4a2fbf)
+<br>
+
+## Destroy a Restaurant
+
+
+
 
 ## Getting Started
 ### Setup
