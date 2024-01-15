@@ -67,4 +67,22 @@ RSpec.describe API::V1::RestaurantsController, type: :request do
       expect(Restaurant.last.name).to eq("Dairy Queen")
     end
   end
+
+  describe "#destroy" do
+    let!(:restaurant) { Restaurant.create(name: "Starbucks", address: "Seattle", user: user)}
+
+    # Don't know what to put inside the expect for the "destroys the restaurant" if I do the before
+    # before { delete "#{root_url}api/v1/restaurants/#{restaurant.id}", params: { id: restaurant.id }, headers: { "X-User-Email": user_email, "X-User-Token": auth_token} }
+
+    it "destroys the restaurant" do
+      expect {
+        delete "#{root_url}api/v1/restaurants/#{restaurant.id}", params: { id: restaurant.id }, headers: { "X-User-Email": user_email, "X-User-Token": auth_token }
+      }.to change(Restaurant, :count).by(-1)
+    end
+
+    it "returns a no content response" do
+      delete "#{root_url}api/v1/restaurants/#{restaurant.id}", params: { id: restaurant.id }, headers: { "X-User-Email": user_email, "X-User-Token": auth_token}
+      expect(response).to have_http_status(:no_content)
+    end
+  end
 end
