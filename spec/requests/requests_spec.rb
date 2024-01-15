@@ -53,4 +53,18 @@ RSpec.describe API::V1::RestaurantsController, type: :request do
       expect(Restaurant.last.name).to eq("Outback")
     end
   end
+
+  describe "#show" do
+    let(:restaurant) { Restaurant.create(name: "Dairy Queen", address: "Seattle", user: user)}
+
+    it "returns a success response" do
+      get "#{root_url}api/v1/restaurants/#{restaurant.id}"
+      expect(response).to be_successful
+    end
+
+    it "returns the correct restaurant" do
+      get "#{root_url}api/v1/restaurants/#{restaurant.id}"
+      expect(Restaurant.last.name).to eq("Dairy Queen")
+    end
+  end
 end
