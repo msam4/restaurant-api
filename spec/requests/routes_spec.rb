@@ -32,7 +32,6 @@ RSpec.describe "Restaurant API Routes", type: :request do
     end
   end
 
-  # PUT test is not working. Same issue as the POST test
   describe "PUT /api/v1/restaurants/:id"  do
     it "updates a restaurant" do
       restaurant = Restaurant.create(name: "Carls Jr.", address: "Portland", user: user)
@@ -43,13 +42,12 @@ RSpec.describe "Restaurant API Routes", type: :request do
     end
   end
 
-  # DELETE test is not working. Same issue as the POST test
   describe "DELETE /api/v1/restaurants/:id" do
     it "deletes a restaurant" do
       restaurant = Restaurant.create(name: "Hardys", address: "Lansing", user: user)
 
       expect {
-        delete "/api/v1/restaurants/#{restaurant.id}"
+        delete "#{root_url}/api/v1/restaurants/#{restaurant.id}", params: { id: restaurant.id }, headers: { "X-User-Email": user_email, "X-User-Token": auth_token}
       }.to change(Restaurant, :count).by(-1)
       expect(response).to have_http_status(204)
     end
