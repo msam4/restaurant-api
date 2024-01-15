@@ -26,6 +26,7 @@ App home: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/
 ### Show One Restaurants
 - Set the verb to GET.
 - In the URL after the GET verb, insert the following url: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/api/v1/restaurants/:id
+  - :id should be the restaurant id you want to see
 ![image](https://github.com/msam4/restaurant-api/assets/137851066/8c8e8a10-b996-4856-a758-eb49873a496e)
 <br>
 - Save and then click the SEND button.
@@ -59,7 +60,8 @@ App home: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/
 ### Update a Restaurant
 - Set the verb to PATCH
 - In the url after the PATCH verb, insert the following url: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/api/v1/restaurants/:id
-- In the HEADER tab, make sure the have same header keys and values when creating a new restaurant (see Create a New Restaurant 3rd bullet point)
+  - :id should be the restaurant id you want to update
+- In the HEADER tab, make sure to have same header keys and values when creating a new restaurant (see Create a New Restaurant 3rd bullet point)
 - In the body tab, select raw and set the drop down menu to JSON
 
 ![image](https://github.com/msam4/restaurant-api/assets/137851066/c5f9e705-e07b-46d2-8490-84735898f67d)
@@ -71,9 +73,20 @@ App home: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/
 <br>
 
 ## Destroy a Restaurant
+- Set the verb to DELETE
+- In the url after the DELETE verb, insert the following url: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/api/v1/restaurants/:id
+  - :id should be the restaurant id that you want to delete
+- In the header tab, make sure to have the following keys and value:
+  - X-User-Email: INSERT_USER_EMAIL
+  - X-User-Token: INSERT_USER_TOKEN
 
+![image](https://github.com/msam4/restaurant-api/assets/137851066/e340ddf9-a681-4e03-8345-c4b63aa877dc)
+<br>
+- Save and then click the SEND button
+- A 204 No Content should appear which means the destory was a success.
 
-
+![image](https://github.com/msam4/restaurant-api/assets/137851066/f5cac8b9-3b15-47d1-b8b2-16bd5dda42b0)
+<br>
 
 ## Getting Started
 ### Setup
