@@ -1,6 +1,8 @@
 # 🍽️ Restaurant API Application
 
 A simple restaurant API application made with Ruby on Rails. 
+<br>
+NO frontend UI. USE Postman to access the API.
 
 <br>
 App home: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/
