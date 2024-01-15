@@ -13,7 +13,6 @@ RSpec.describe "Restaurant API Routes", type: :request do
     end
   end
 
-  # POST test is not working. Same issue in the controller rspec test (now in request spec test)
   describe "POST /api/v1/restaurants" do
     it "creates a new restaurant" do
       # user = User.create(email: "tom@email.com", password: "testtest")
@@ -38,7 +37,7 @@ RSpec.describe "Restaurant API Routes", type: :request do
     it "updates a restaurant" do
       restaurant = Restaurant.create(name: "Carls Jr.", address: "Portland", user: user)
       new_attributes = { name: "Long Mein", address: "Portland" }
-      put "/api/v1/restaurants/#{restaurant.id}", params: { restaurant: new_attributes }
+      put "#{root_url}/api/v1/restaurants/#{restaurant.id}", params: { restaurant: new_attributes }, headers: { "X-User-Email": user_email, "X-User-Token": auth_token }
 
       expect(response).to have_http_status(200)
     end
