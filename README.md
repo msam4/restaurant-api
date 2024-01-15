@@ -16,8 +16,11 @@ App home: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/
 - In the URL after the GET verb, insert the following url: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/api/v1/restaurants
 ![image](https://github.com/msam4/restaurant-api/assets/137851066/a1841fd8-20d0-4508-a22f-146d8981ea3c)
 <br>
+
 - Save and then click the SEND button.
-![image](https://github.com/msam4/restaurant-api/assets/137851066/cfa48691-5efd-4c3d-856c-9d46e3be1b12)
+
+![image](https://github.com/msam4/restaurant-api/assets/137851066/d4c77574-50c1-4c79-b655-8f21169cc11d)
+
 <br>
 
 ### Show One Restaurants
@@ -26,6 +29,7 @@ App home: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/
 ![image](https://github.com/msam4/restaurant-api/assets/137851066/8c8e8a10-b996-4856-a758-eb49873a496e)
 <br>
 - Save and then click the SEND button.
+
 ![image](https://github.com/msam4/restaurant-api/assets/137851066/6d05dd10-f1dc-4fa1-b2a6-53de3e1e4128)
 <br>
 
@@ -39,6 +43,19 @@ App home: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/
 ![image](https://github.com/msam4/restaurant-api/assets/137851066/1c8d7bd4-d244-4adb-97a6-c296495d5b4c)
 <br>
 
+- In the body tab, select raw and the drop down menu set as JSON.
+- Add a new restaurant using this format inside of curly brackets:
+  - "name": "ADD_RESTAURANT_NAME", "address": "ADD_RESTAURANT_ADDRESS"
+<br>
+
+![image](https://github.com/msam4/restaurant-api/assets/137851066/0b430f29-64de-43ab-8a0a-717e9225ae1c)
+<br>
+- Save and then click the SEND button
+
+![image](https://github.com/msam4/restaurant-api/assets/137851066/a8f4363c-1776-491d-bd46-170fbfeb3120)
+<br>
+
+### Update a Restaurant
 
 ## Getting Started
 ### Setup
