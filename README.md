@@ -15,10 +15,7 @@ Contact me for URL link.
 
 ### Show All Restaurants
 - Set the verb to GET.
-- In the URL after the GET verb, insert the following url: URL/api/v1/restaurants
-![image](https://github.com/msam4/restaurant-api/assets/137851066/a1841fd8-20d0-4508-a22f-146d8981ea3c)
-<br>
-
+- In the URL after the GET verb, insert the following url: INSERT_URL_HERE/api/v1/restaurants
 - Save and then click the SEND button.
 
 ![image](https://github.com/msam4/restaurant-api/assets/137851066/d4c77574-50c1-4c79-b655-8f21169cc11d)
@@ -27,10 +24,8 @@ Contact me for URL link.
 
 ### Show One Restaurants
 - Set the verb to GET.
-- In the URL after the GET verb, insert the following url: URL/api/v1/restaurants/:id
+- In the URL after the GET verb, insert the following url: INSERT_URL_HERE/api/v1/restaurants/:id
   - :id should be the restaurant id you want to see
-![image](https://github.com/msam4/restaurant-api/assets/137851066/8c8e8a10-b996-4856-a758-eb49873a496e)
-<br>
 - Save and then click the SEND button.
 
 ![image](https://github.com/msam4/restaurant-api/assets/137851066/6d05dd10-f1dc-4fa1-b2a6-53de3e1e4128)
@@ -38,22 +33,17 @@ Contact me for URL link.
 
 ### Create a New Restaurant
 - Set the verb to POST
-- In the URL after POST verb, insert the following url: URL/api/v1/restaurants
+- In the URL after POST verb, insert the following url: INSERT_URL_HERE/api/v1/restaurants
 - In the Headers tab under the verb and url, insert the following key and value:
   - Content-Type: application/json
   - X-User-Email: INSERT_USER_EMAIL
   - X-User-Token: INSERT_USER_TOKEN
-![image](https://github.com/msam4/restaurant-api/assets/137851066/1c8d7bd4-d244-4adb-97a6-c296495d5b4c)
-<br>
+
 
 - In the body tab, select raw and the drop down menu set as JSON.
 - Add a new restaurant using this format inside of curly brackets:
   - "name": "ADD_RESTAURANT_NAME", "address": "ADD_RESTAURANT_ADDRESS"
-<br>
 
-![image](https://github.com/msam4/restaurant-api/assets/137851066/8fa8b165-c51d-4654-94d4-accb14b6346b)
-
-<br>
 - Save and then click the SEND button
 
 ![image](https://github.com/msam4/restaurant-api/assets/137851066/a8f4363c-1776-491d-bd46-170fbfeb3120)
@@ -61,13 +51,10 @@ Contact me for URL link.
 
 ### Update a Restaurant
 - Set the verb to PATCH
-- In the url after the PATCH verb, insert the following url: URL/api/v1/restaurants/:id
+- In the url after the PATCH verb, insert the following url: INSERT_URL_HERE/api/v1/restaurants/:id
   - :id should be the restaurant id you want to update
 - In the HEADER tab, make sure to have same header keys and values when creating a new restaurant (see Create a New Restaurant 3rd bullet point)
 - In the body tab, select raw and set the drop down menu to JSON
-
-![image](https://github.com/msam4/restaurant-api/assets/137851066/c5f9e705-e07b-46d2-8490-84735898f67d)
-<br>
 
 - Save and then click the SEND button
 
@@ -76,14 +63,12 @@ Contact me for URL link.
 
 ## Destroy a Restaurant
 - Set the verb to DELETE
-- In the url after the DELETE verb, insert the following url: URL/api/v1/restaurants/:id
+- In the url after the DELETE verb, insert the following url: INSERT_URL_HERE/api/v1/restaurants/:id
   - :id should be the restaurant id that you want to delete
 - In the header tab, make sure to have the following keys and value:
   - X-User-Email: INSERT_USER_EMAIL
   - X-User-Token: INSERT_USER_TOKEN
 
-![image](https://github.com/msam4/restaurant-api/assets/137851066/e340ddf9-a681-4e03-8345-c4b63aa877dc)
-<br>
 - Save and then click the SEND button
 - A 204 No Content should appear which means the destory was a success.
 
