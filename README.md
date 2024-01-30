@@ -15,7 +15,7 @@ Contact me for URL link.
 
 ### Show All Restaurants
 - Set the verb to GET.
-- In the URL after the GET verb, insert the following url: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/api/v1/restaurants
+- In the URL after the GET verb, insert the following url: URL/api/v1/restaurants
 ![image](https://github.com/msam4/restaurant-api/assets/137851066/a1841fd8-20d0-4508-a22f-146d8981ea3c)
 <br>
 
@@ -27,7 +27,7 @@ Contact me for URL link.
 
 ### Show One Restaurants
 - Set the verb to GET.
-- In the URL after the GET verb, insert the following url: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/api/v1/restaurants/:id
+- In the URL after the GET verb, insert the following url: URL/api/v1/restaurants/:id
   - :id should be the restaurant id you want to see
 ![image](https://github.com/msam4/restaurant-api/assets/137851066/8c8e8a10-b996-4856-a758-eb49873a496e)
 <br>
@@ -38,7 +38,7 @@ Contact me for URL link.
 
 ### Create a New Restaurant
 - Set the verb to POST
-- In the URL after POST verb, insert the following url: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/api/v1/restaurants
+- In the URL after POST verb, insert the following url: URL/api/v1/restaurants
 - In the Headers tab under the verb and url, insert the following key and value:
   - Content-Type: application/json
   - X-User-Email: INSERT_USER_EMAIL
@@ -61,7 +61,7 @@ Contact me for URL link.
 
 ### Update a Restaurant
 - Set the verb to PATCH
-- In the url after the PATCH verb, insert the following url: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/api/v1/restaurants/:id
+- In the url after the PATCH verb, insert the following url: URL/api/v1/restaurants/:id
   - :id should be the restaurant id you want to update
 - In the HEADER tab, make sure to have same header keys and values when creating a new restaurant (see Create a New Restaurant 3rd bullet point)
 - In the body tab, select raw and set the drop down menu to JSON
@@ -76,7 +76,7 @@ Contact me for URL link.
 
 ## Destroy a Restaurant
 - Set the verb to DELETE
-- In the url after the DELETE verb, insert the following url: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/api/v1/restaurants/:id
+- In the url after the DELETE verb, insert the following url: URL/api/v1/restaurants/:id
   - :id should be the restaurant id that you want to delete
 - In the header tab, make sure to have the following keys and value:
   - X-User-Email: INSERT_USER_EMAIL
