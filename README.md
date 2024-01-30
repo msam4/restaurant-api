@@ -5,7 +5,7 @@ A simple restaurant API application made with Ruby on Rails.
 NO frontend UI. USE Postman to access the API.
 
 <br>
-App home: https://michael-restaurants-api-78cca9b4536d.herokuapp.com/
+Contact me for URL link.
    
 ## How to Use
 - Open an API platform application like [Postman](https://www.postman.com/) and sign in.
